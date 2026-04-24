@@ -45,7 +45,7 @@
         "backgroundColor": "#1a1a1a"
       },
       "package": "com.locationtracker.app",
-      "googleServicesFile": "./src/google-services.json",
+      "googleServicesFile": "./google-services.json",
       "config": {
         "googleMapsApiKey": "AIzaSyAEHWTfoLIRSU57EkqNpvL9hUsne13mz2w"
       },
