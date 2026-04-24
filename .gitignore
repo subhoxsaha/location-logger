@@ -1,46 +1,39 @@
 # Expo
 .expo/
 dist/
-.expo-shared/
+web-build/
+prebuild-binaries/
+
+# Generated Native Folders
+android/
+ios/
 
 # Node modules
 node_modules/
 npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# Secrets & Environment
+.env
+.env.local
+.env.*.local
 *.jks
 *.p8
 *.p12
 *.key
 *.mobileprovision
-*.orig.*
-web-build/
+google-services.json
 
-# Environment
-.env
-.env.local
-.env.*.local
-
-# IDE
+# IDE & OS
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
 .DS_Store
+Thumbs.db
 
-# Build
+# Build & Testing
 build/
-ios/Pods/
-ios/Podfile.lock
-android/gradlew
-android/gradlew.bat
-android/.gradle/
-android/local.properties
-android/app/release/
-
-# Testing
 coverage/
 .nyc_output/
-
-# Yarn
-yarn.lock
-*.yarn
