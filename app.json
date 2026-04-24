@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Location Tracker",
+    "name": "location-tracker",
     "slug": "location-tracker",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -25,8 +25,7 @@
       "**/*"
     ],
     "ios": {
-      "supportsTabletMode": true,
-      "bundleIdentifier": "com.locationtracker.app",
+      "bundleIdentifier": "Device.Tracking",
       "config": {
         "googleMapsApiKey": "AIzaSyAEHWTfoLIRSU57EkqNpvL9hUsne13mz2w"
       },
@@ -45,10 +44,12 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#1a1a1a"
       },
-      "package": "com.locationtracker.app",
+      "package": "Device.Tracking",
       "googleServicesFile": "./google-services.json",
       "config": {
-        "googleMapsApiKey": "AIzaSyAEHWTfoLIRSU57EkqNpvL9hUsne13mz2w"
+        "googleMaps": {
+          "apiKey": "AIzaSyAEHWTfoLIRSU57EkqNpvL9hUsne13mz2w"
+        }
       },
       "permissions": [
         "android.permission.ACCESS_FINE_LOCATION",
@@ -61,8 +62,6 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "scheme": "locationtracker",
-    "description": "Mobile app for tracking user location with online GPS and offline WiFi scanning capabilities.",
     "extra": {
       "eas": {
         "projectId": "d97af8f3-810b-4d8d-a688-8e17e6d36226"

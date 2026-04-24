@@ -23,7 +23,7 @@ yarn-error.*
 *.p12
 *.key
 *.mobileprovision
-google-services.json
+# google-services.json - Removed from ignore so EAS can see it
 
 # IDE & OS
 .vscode/

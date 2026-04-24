@@ -1,5 +1,7 @@
 import { initializeApp, getApp, getApps, FirebaseApp } from 'firebase/app';
-import { getAuth, initializeAuth, getReactNativePersistence, Auth } from 'firebase/auth';
+import { getAuth, initializeAuth, Auth } from 'firebase/auth';
+// @ts-ignore - getReactNativePersistence is available at runtime in RN but sometimes missing from TS definitions in Firebase 10+
+import { getReactNativePersistence } from 'firebase/auth';
 import { getFirestore, Firestore } from 'firebase/firestore';
 import ReactNativeAsyncStorage from '@react-native-async-storage/async-storage';
 import { 
@@ -21,9 +23,7 @@ const firebaseConfig = {
   appId: FIREBASE_APP_ID,
 };
 
-let app: FirebaseApp | undefined;
-let auth: Auth | undefined;
-let db: Firestore | undefined;
+
 
 /**
  * Validates that critical Firebase config fields are present.
@@ -33,27 +33,24 @@ const isConfigValid = (): boolean => {
   return !!(apiKey && projectId && appId && !apiKey.includes('YOUR_'));
 };
 
-try {
+// Initialize or Retrieve Firebase App
+let app: FirebaseApp;
+if (getApps().length === 0) {
   if (!isConfigValid()) {
-    console.warn('[Firebase] Configuration incomplete. Check your .env file.');
-  } else {
-    // Initialize or Retrieve Firebase App
-    if (getApps().length === 0) {
-      app = initializeApp(firebaseConfig);
-      auth = initializeAuth(app, {
-        persistence: getReactNativePersistence(ReactNativeAsyncStorage),
-      });
-    } else {
-      app = getApp();
-      auth = getAuth(app);
-    }
-    
-    // Initialize Firestore
-    db = getFirestore(app);
+    throw new Error('[Firebase] Configuration incomplete. Check your .env file.');
   }
-} catch (error) {
-  console.error('[Firebase] Initialization failed:', error);
+  app = initializeApp(firebaseConfig);
+} else {
+  app = getApp();
 }
+
+// Initialize Auth
+const auth = initializeAuth(app, {
+  persistence: getReactNativePersistence(ReactNativeAsyncStorage),
+});
+
+// Initialize Firestore
+const db = getFirestore(app);
 
 export { auth, db };
 export default app;

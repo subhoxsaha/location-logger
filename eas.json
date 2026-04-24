@@ -9,10 +9,26 @@
       "distribution": "internal"
     },
     "preview": {
-      "distribution": "internal"
+      "distribution": "internal",
+      "env": {
+        "FIREBASE_API_KEY": "AIzaSyAEHWTfoLIRSU57EkqNpvL9hUsne13mz2w",
+        "FIREBASE_AUTH_DOMAIN": "device-tracking-13ade.firebaseapp.com",
+        "FIREBASE_PROJECT_ID": "device-tracking-13ade",
+        "FIREBASE_STORAGE_BUCKET": "device-tracking-13ade.firebasestorage.app",
+        "FIREBASE_MESSAGING_SENDER_ID": "870280899211",
+        "FIREBASE_APP_ID": "1:870280899211:android:7da308c138fc4b5182028e"
+      }
     },
     "production": {
-      "distribution": "store"
+      "distribution": "store",
+      "env": {
+        "FIREBASE_API_KEY": "AIzaSyAEHWTfoLIRSU57EkqNpvL9hUsne13mz2w",
+        "FIREBASE_AUTH_DOMAIN": "device-tracking-13ade.firebaseapp.com",
+        "FIREBASE_PROJECT_ID": "device-tracking-13ade",
+        "FIREBASE_STORAGE_BUCKET": "device-tracking-13ade.firebasestorage.app",
+        "FIREBASE_MESSAGING_SENDER_ID": "870280899211",
+        "FIREBASE_APP_ID": "1:870280899211:android:7da308c138fc4b5182028e"
+      }
     }
   },
   "submit": {

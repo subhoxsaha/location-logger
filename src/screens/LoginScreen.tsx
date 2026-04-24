@@ -162,7 +162,7 @@ const LoginScreen: React.FC = () => {
             {/* Email */}
             <View style={styles.fieldGroup}>
               <Text style={styles.fieldLabel}>EMAIL</Text>
-              <View style={[styles.inputWrap, errors.email && styles.inputWrapError]}>
+              <View style={[styles.inputWrap, !!errors.email && styles.inputWrapError]}>
                 <Ionicons name="mail-outline" size={16} color="#444" style={styles.inputIcon} />
                 <TextInput
                   style={styles.input}
@@ -185,7 +185,7 @@ const LoginScreen: React.FC = () => {
             {/* Password */}
             <View style={styles.fieldGroup}>
               <Text style={styles.fieldLabel}>PASSWORD</Text>
-              <View style={[styles.inputWrap, errors.password && styles.inputWrapError]}>
+              <View style={[styles.inputWrap, !!errors.password && styles.inputWrapError]}>
                 <Ionicons name="lock-closed-outline" size={16} color="#444" style={styles.inputIcon} />
                 <TextInput
                   ref={passwordRef}
@@ -223,7 +223,7 @@ const LoginScreen: React.FC = () => {
             {mode === 'signup' && (
               <View style={styles.fieldGroup}>
                 <Text style={styles.fieldLabel}>CONFIRM PASSWORD</Text>
-                <View style={[styles.inputWrap, errors.confirm && styles.inputWrapError]}>
+                <View style={[styles.inputWrap, !!errors.confirm && styles.inputWrapError]}>
                   <Ionicons name="checkmark-circle-outline" size={16} color="#444" style={styles.inputIcon} />
                   <TextInput
                     ref={confirmRef}
