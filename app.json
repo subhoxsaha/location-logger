@@ -13,6 +13,7 @@
           "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to access your location."
         }
       ],
+      "@react-native-google-signin/google-signin",
       "expo-font"
     ],
     "splash": {
