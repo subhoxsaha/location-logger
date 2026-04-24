@@ -1,0 +1,46 @@
+# Expo
+.expo/
+dist/
+.expo-shared/
+
+# Node modules
+node_modules/
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Build
+build/
+ios/Pods/
+ios/Podfile.lock
+android/gradlew
+android/gradlew.bat
+android/.gradle/
+android/local.properties
+android/app/release/
+
+# Testing
+coverage/
+.nyc_output/
+
+# Yarn
+yarn.lock
+*.yarn

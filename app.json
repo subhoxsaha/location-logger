@@ -1,0 +1,71 @@
+{
+  "expo": {
+    "name": "Location Tracker",
+    "slug": "location-tracker",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to access your location."
+        }
+      ],
+      "expo-font"
+    ],
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1a1a1a"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTabletMode": true,
+      "bundleIdentifier": "com.locationtracker.app",
+      "config": {
+        "googleMapsApiKey": "AIzaSyAEHWTfoLIRSU57EkqNpvL9hUsne13mz2w"
+      },
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "This app needs access to your location for tracking purposes.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "This app needs access to your location for tracking purposes.",
+        "NSLocationAlwaysUsageDescription": "This app needs access to your location for tracking purposes.",
+        "NSBonjourServiceTypes": [
+          "_http._tcp",
+          "_ws._tcp"
+        ]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1a1a1a"
+      },
+      "package": "com.locationtracker.app",
+      "googleServicesFile": "./src/google-services.json",
+      "config": {
+        "googleMapsApiKey": "AIzaSyAEHWTfoLIRSU57EkqNpvL9hUsne13mz2w"
+      },
+      "permissions": [
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.CHANGE_NETWORK_STATE",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.INTERNET"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "scheme": "locationtracker",
+    "description": "Mobile app for tracking user location with online GPS and offline WiFi scanning capabilities.",
+    "extra": {
+      "eas": {
+        "projectId": "d97af8f3-810b-4d8d-a688-8e17e6d36226"
+      }
+    }
+  }
+}
