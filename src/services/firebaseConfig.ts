@@ -34,23 +34,31 @@ const isConfigValid = (): boolean => {
 };
 
 // Initialize or Retrieve Firebase App
-let app: FirebaseApp;
-if (getApps().length === 0) {
-  if (!isConfigValid()) {
-    throw new Error('[Firebase] Configuration incomplete. Check your .env file.');
+let app: FirebaseApp | undefined;
+try {
+  if (getApps().length === 0) {
+    if (isConfigValid()) {
+      app = initializeApp(firebaseConfig);
+    } else {
+      console.error('[Firebase] Configuration incomplete. Check your environment variables.');
+    }
+  } else {
+    app = getApp();
   }
-  app = initializeApp(firebaseConfig);
-} else {
-  app = getApp();
+} catch (error) {
+  console.error('[Firebase] Initialization error:', error);
 }
 
-// Initialize Auth
-const auth = initializeAuth(app, {
-  persistence: getReactNativePersistence(ReactNativeAsyncStorage),
-});
+// Initialize Auth safely
+let auth: Auth | undefined;
+if (app) {
+  auth = initializeAuth(app, {
+    persistence: getReactNativePersistence(ReactNativeAsyncStorage),
+  });
+}
 
-// Initialize Firestore
-const db = getFirestore(app);
+// Initialize Firestore safely
+const db = app ? getFirestore(app) : undefined;
 
 export { auth, db };
 export default app;

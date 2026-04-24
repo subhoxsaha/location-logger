@@ -25,7 +25,7 @@
       "**/*"
     ],
     "ios": {
-      "bundleIdentifier": "Device.Tracking",
+      "bundleIdentifier": "device.tracking",
       "config": {
         "googleMapsApiKey": "AIzaSyAEHWTfoLIRSU57EkqNpvL9hUsne13mz2w"
       },
@@ -44,7 +44,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#1a1a1a"
       },
-      "package": "Device.Tracking",
+      "package": "device.tracking",
       "googleServicesFile": "./google-services.json",
       "config": {
         "googleMaps": {
