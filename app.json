@@ -27,7 +27,7 @@
     "ios": {
       "bundleIdentifier": "device.tracking",
       "config": {
-        "googleMapsApiKey": "YOUR_GOOGLE_MAPS_API_KEY"
+        "googleMapsApiKey": "AIzaSyFAKE-GOOGLE-MAPS-KEY"
       },
       "infoPlist": {
         "NSLocationWhenInUseUsageDescription": "This app needs access to your location for tracking purposes.",
@@ -48,7 +48,7 @@
       "googleServicesFile": "./google-services.json",
       "config": {
         "googleMaps": {
-          "apiKey": "YOUR_GOOGLE_MAPS_API_KEY"
+          "apiKey": "AIzaSyFAKE-GOOGLE-MAPS-KEY"
         }
       },
       "permissions": [
