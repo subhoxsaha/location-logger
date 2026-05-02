@@ -14,6 +14,13 @@ FIREBASE_APP_ID=YOUR_FIREBASE_APP_ID
 GOOGLE_SIGN_IN_WEB_CLIENT_ID=YOUR_GOOGLE_SIGN_IN_WEB_CLIENT_ID
 ```
 
+## App Configuration
+
+- Update `app.json` with your Google Maps API key:
+  - `ios.config.googleMapsApiKey`
+  - `android.config.googleMaps.apiKey`
+- If you use EAS build profiles, replace the placeholder Firebase values in `eas.json` (or configure EAS secrets).
+
 ## Getting Started with Expo
 
 ### 1. Install Dependencies
