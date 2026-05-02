@@ -20,9 +20,9 @@ GOOGLE_SIGN_IN_WEB_CLIENT_ID=YOUR_GOOGLE_SIGN_IN_WEB_CLIENT_ID
   - `ios.config.googleMapsApiKey`
   - `android.config.googleMaps.apiKey`
 - If you use EAS build profiles, keep the example placeholders in `eas.json` and set Firebase values via EAS secrets (recommended for production).
-  - Create secrets for: `FIREBASE_API_KEY`, `FIREBASE_AUTH_DOMAIN`, `FIREBASE_PROJECT_ID`, `FIREBASE_STORAGE_BUCKET`, `FIREBASE_MESSAGING_SENDER_ID`, `FIREBASE_APP_ID`, and `GOOGLE_SIGN_IN_WEB_CLIENT_ID` (if your EAS build needs Google Sign-In).
-  - If your EAS build needs Google Sign-In, add `GOOGLE_SIGN_IN_WEB_CLIENT_ID` to the `eas.json` env block. Keep it in `.env` for local dev.
-  - Example: `eas secret:create --name FIREBASE_API_KEY --value YOUR_FIREBASE_API_KEY` (repeat for each).
+  - Create secrets for: `FIREBASE_API_KEY`, `FIREBASE_AUTH_DOMAIN`, `FIREBASE_PROJECT_ID`, `FIREBASE_STORAGE_BUCKET`, `FIREBASE_MESSAGING_SENDER_ID`, `FIREBASE_APP_ID`.
+  - For Google Sign-In in EAS builds, create `GOOGLE_SIGN_IN_WEB_CLIENT_ID` as a secret and add it to the `eas.json` env block. Keep it in `.env` for local dev.
+  - Example: `eas secret:create --name FIREBASE_API_KEY --value <your Firebase API key>` (repeat for each).
 
 ## Getting Started with Expo
 
