@@ -14,7 +14,7 @@
         "FIREBASE_API_KEY": "AIzaSyFAKE-KEY-EXAMPLE",
         "FIREBASE_AUTH_DOMAIN": "your-project-id.firebaseapp.com",
         "FIREBASE_PROJECT_ID": "your-project-id",
-        "FIREBASE_STORAGE_BUCKET": "your-project-id.appspot.com",
+        "FIREBASE_STORAGE_BUCKET": "your-project-id.firebasestorage.app",
         "FIREBASE_MESSAGING_SENDER_ID": "123456789012",
         "FIREBASE_APP_ID": "1:123456789012:android:abc123def456"
       }
@@ -25,7 +25,7 @@
         "FIREBASE_API_KEY": "AIzaSyFAKE-KEY-EXAMPLE",
         "FIREBASE_AUTH_DOMAIN": "your-project-id.firebaseapp.com",
         "FIREBASE_PROJECT_ID": "your-project-id",
-        "FIREBASE_STORAGE_BUCKET": "your-project-id.appspot.com",
+        "FIREBASE_STORAGE_BUCKET": "your-project-id.firebasestorage.app",
         "FIREBASE_MESSAGING_SENDER_ID": "123456789012",
         "FIREBASE_APP_ID": "1:123456789012:android:abc123def456"
       }
