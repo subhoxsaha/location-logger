@@ -19,7 +19,9 @@ GOOGLE_SIGN_IN_WEB_CLIENT_ID=YOUR_GOOGLE_SIGN_IN_WEB_CLIENT_ID
 - Update `app.json` with your Google Maps API key:
   - `ios.config.googleMapsApiKey`
   - `android.config.googleMaps.apiKey`
-- If you use EAS build profiles, keep the example placeholders in `eas.json` and set Firebase values via EAS secrets (recommended for production). Create secrets for `FIREBASE_API_KEY`, `FIREBASE_AUTH_DOMAIN`, `FIREBASE_PROJECT_ID`, `FIREBASE_STORAGE_BUCKET`, `FIREBASE_MESSAGING_SENDER_ID`, and `FIREBASE_APP_ID`. Example: `eas secret:create --name FIREBASE_API_KEY --value <value>` (repeat for each).
+- If you use EAS build profiles, keep the example placeholders in `eas.json` and set Firebase values via EAS secrets (recommended for production).
+  - Create secrets for: `FIREBASE_API_KEY`, `FIREBASE_AUTH_DOMAIN`, `FIREBASE_PROJECT_ID`, `FIREBASE_STORAGE_BUCKET`, `FIREBASE_MESSAGING_SENDER_ID`, `FIREBASE_APP_ID`.
+  - Example: `eas secret:create --name FIREBASE_API_KEY --value <value>` (repeat for each).
 
 ## Getting Started with Expo
 
